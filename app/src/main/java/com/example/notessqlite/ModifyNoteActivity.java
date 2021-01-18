@@ -33,7 +33,7 @@ public class ModifyNoteActivity extends Activity implements View.OnClickListener
         updateBtn = findViewById(R.id.btn_update);
         deleteBtn = findViewById(R.id.btn_delete);
 
-        Intent intent = getIntent();//Getting all the data passed from the list actvity.
+        Intent intent = getIntent();//Getting all the data passed from the main activity.
         String id = intent.getStringExtra("id");
         String name = intent.getStringExtra("title");
         String desc = intent.getStringExtra("desc");    //When the user clicks the button, the texts will get modified using the intent.

@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabseHelper extends SQLiteOpenHelper {
 
-    static final String DB_NAME = "Notes.db";//This will be the name of the database.
+    static final String DB_NAME = "Notes.db";//This will be the name of the database storing the notes.
 
     public static final String TABLE_NAME = "Notes";//Creating a table which would store the data.
 

@@ -49,11 +49,11 @@ public class DBManager {
 
     //Method to update.
     public int update(long _id, String name, String desc){
-        ContentValues contentValues = new ContentValues();
+        ContentValues contentValues = new ContentValues();//Storing all the data provided by the user in content values.
         contentValues.put(DatabseHelper.SUBJECT, name);
         contentValues.put(DatabseHelper.DESC, desc);
 
-        int i = database.update(DatabseHelper.TABLE_NAME, contentValues, DatabseHelper._ID + " = "+ _id, null);
+        int i = database.update(DatabseHelper.TABLE_NAME, contentValues, DatabseHelper._ID + " = "+ _id, null);//Updating the data provided in the content values according to the ID.
 
         return i;
     }

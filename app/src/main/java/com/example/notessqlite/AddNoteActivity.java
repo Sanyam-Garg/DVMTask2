@@ -25,11 +25,12 @@ public class AddNoteActivity extends Activity implements View.OnClickListener {
         setTitle("Add Record");
         setContentView(R.layout.activity_add_note);
 
+        //Referring the widgets.
         subjectEditText = findViewById(R.id.subject_edittext);
         descEditText = findViewById(R.id.description_edittext);
         addTodoBtn = findViewById(R.id.add_record);
 
-        dbManger = new DBManager(this);
+        dbManger = new DBManager(this);//When clicked on add note, open the database using the method in the DBManager.
         dbManger.open();
         addTodoBtn.setOnClickListener(this);
 

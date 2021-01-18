@@ -30,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         dbManger = new DBManager(this);
-        dbManger.open();
+        dbManger.open();//Creating the database using the method in DBManager.
 
-        Cursor cursor = dbManger.fetch();
+        Cursor cursor = dbManger.fetch();//Fetching the cursor containing the data.
         listView = findViewById(R.id.list_view);
         listView.setEmptyView(findViewById(R.id.empty));
 
@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new  AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long viewid) {
+                //Referring the text views
                 TextView idTextView = view.findViewById(R.id.id);
                 TextView titleTextView = view.findViewById(R.id.title);
                 TextView descTextView = view.findViewById(R.id.desc);
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 String title = titleTextView.getText().toString();
                 String desc = descTextView.getText().toString();
 
-                Intent modify_intent = new Intent(getApplicationContext(), ModifyNoteActivity.class);
+                Intent modify_intent = new Intent(getApplicationContext(), ModifyNoteActivity.class);//Intent that takes the user to the modify note activity in the following context.
                 modify_intent.putExtra("title", title);
                 modify_intent.putExtra("desc", desc);
                 modify_intent.putExtra("id", id);
